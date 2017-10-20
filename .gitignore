@@ -8,3 +8,4 @@ test-output
 target
 *.class
 *.jar
+car-shop/target
