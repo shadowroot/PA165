@@ -32,7 +32,7 @@ public class CarShopStorageServiceImpl implements CarShopStorageService {
 	@Override
 	public void addCarToStorage(Car car) {
                 if(car.getPrice() < 0){
-                    throw new IllegalArgumentException();
+                    throw new IllegalArgumentException("We expect exception on negative price");
                 }
 		CarShopStorage.getInstancce().getCars().computeIfAbsent(car.getType(), x -> new ArrayList<>()).add(car);
 	}
